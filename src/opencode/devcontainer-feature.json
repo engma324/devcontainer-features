@@ -1,0 +1,13 @@
+{
+    "name": "OpenCode",
+    "id": "opencode",
+    "version": "1.0.1",
+    "description": "Installs the latest Opencode CLI from GitHub releases",
+    "containerEnv": {
+        "OPENCODE_CONFIG_CONTENT": "{\"disabled_providers\":[\"opencode\"]}",
+        "OPENCODE_EXPERIMENTAL": "true"
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
