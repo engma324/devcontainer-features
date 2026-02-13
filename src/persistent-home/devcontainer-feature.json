@@ -1,0 +1,22 @@
+{
+    "name": "Persistent Home Mount",
+    "id": "persistent-home",
+    "version": "1.0.0",
+    "description": "Bind-mount the host workspace path with a -home suffix as the container home directory.",
+    "mounts": [
+        {
+            "source": "devcontainer-home-${devcontainerId}",
+            "target": "/home/host",
+            "type": "volume"
+        },
+        {
+            "source": "devcontainer-userfiles",
+            "target": "/home/userfiles",
+            "type": "volume"
+        }
+    ],
+    "postCreateCommand": "/usr/local/bin/persistent-home-init",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
