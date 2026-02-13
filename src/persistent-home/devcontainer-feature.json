@@ -1,0 +1,22 @@
+{
+    "name": "Persistent Home Mount",
+    "id": "persistent-home",
+    "version": "1.0.3",
+    "description": "Persists the container home directory as a Docker volume.",
+    "mounts": [
+        {
+            "source": "devcontainer-home-${devcontainerId}",
+            "target": "/home",
+            "type": "volume"
+        },
+        {
+            "source": "devcontainer-userfiles",
+            "target": "/userfiles",
+            "type": "volume"
+        }
+    ],
+    "postStartCommand": "/usr/local/bin/persistent-home-init",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}

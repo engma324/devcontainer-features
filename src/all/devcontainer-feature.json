@@ -1,0 +1,13 @@
+{
+    "name": "All",
+    "id": "all",
+    "version": "1.0.2",
+    "description": "Composes all features in the repo",
+    "dependsOn": {
+        "ghcr.io/engma324/devcontainer-features/persistent-home:1": {},
+        "ghcr.io/engma324/devcontainer-features/opencode:1": {}
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
