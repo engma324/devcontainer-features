@@ -1,7 +1,7 @@
 
 # OpenCode (opencode)
 
-Installs the latest Opencode CLI from GitHub releases
+Installs the latest OpenCode CLI from the official update API
 
 ## Example Usage
 
