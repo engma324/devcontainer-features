@@ -18,6 +18,9 @@ jobs:
         baseImage:
           - mcr.microsoft.com/devcontainers/base:ubuntu
           - ubuntu:latest
+        include:
+          - features: playwright-cli
+            baseImage: mcr.microsoft.com/devcontainers/typescript-node:22
     steps:
       - uses: actions/checkout@v4
 

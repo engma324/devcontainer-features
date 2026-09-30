@@ -1,0 +1,10 @@
+{
+    "name": "Playwright CLI with Chrome",
+    "id": "playwright-cli",
+    "version": "1.0.0",
+    "description": "Installs the latest Playwright CLI and Google Chrome with system dependencies",
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils",
+        "ghcr.io/devcontainers/features/node"
+    ]
+}
