@@ -6,9 +6,10 @@ source dev-container-features-test-lib
 
 check "opencode installed" bash -c "command -v opencode"
 check "opencode executable" bash -c "opencode --version >/dev/null 2>&1"
+check "opencode v2 installed" bash -c "opencode --version | grep -Eq '^opencode v2[.]'"
 check "opencode models returns no model" bash -c '
-opencode models 2>&1
-OUTPUT="$(opencode models 2>&1 || true)"
+opencode models --standalone 2>&1
+OUTPUT="$(opencode models --standalone 2>&1 || true)"
 if [ -z "$(echo "$OUTPUT" | tr -d "[:space:]")" ]; then
 	exit 0
 fi
